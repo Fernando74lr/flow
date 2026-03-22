@@ -5,13 +5,54 @@
 // custom components at https://material.angular.dev/guide/theming
 @use '@angular/material' as mat;
 
+// Define custom color palettes matching the design
+$dark-teal-palette: (
+  0: #000000,
+  10: #001f24,
+  20: #003640,
+  25: #00424d,
+  30: #004e5a,
+  35: #005a67,
+  40: #006874,
+  50: #00838f,
+  60: #009fac,
+  70: #00bcd4,
+  80: #26c6da,
+  90: #4dd0e1,
+  95: #80deea,
+  98: #b2ebf2,
+  99: #e0f7fa,
+  100: #ffffff,
+);
+
+$lime-palette: (
+  0: #000000,
+  10: #1a2000,
+  20: #2e3600,
+  25: #394200,
+  30: #444e00,
+  35: #505a00,
+  40: #5c6600,
+  50: #748000,
+  60: #8d9a00,
+  70: #a6b500,
+  80: #c0d100,
+  90: #dbed00,
+  95: #e9f54f,
+  98: #f4fb8f,
+  99: #fafdc7,
+  100: #ffffff,
+);
+
 html {
   height: 100%;
   @include mat.theme(
     (
       color: (
-        primary: mat.$azure-palette,
-        tertiary: mat.$blue-palette,
+        primary: $lime-palette,
+        secondary: $dark-teal-palette,
+        tertiary: mat.$cyan-palette,
+        theme-type: dark,
       ),
       typography: Roboto,
       density: 0,
@@ -23,19 +64,20 @@ html {
       container-shape-radius: 20px,
     )
   );
+
+  // Ensure buttons have proper text colors
+  --mat-text-button-label-text-color: #ffffff;
+  --mat-outlined-button-label-text-color: #ffffff;
+  --mat-protected-button-label-text-color: #0a3540;
 }
 
 body {
-  // Default the application to a light color theme. This can be changed to
-  // `dark` to enable the dark color theme, or to `light dark` to defer to the
-  // user's system settings.
-  color-scheme: light;
+  // Enable dark color theme
+  color-scheme: dark;
 
-  // Set a default background, font and text colors for the application using
-  // Angular Material's system-level CSS variables. Learn more about these
-  // variables at https://material.angular.dev/guide/system-variables
-  background-color: var(--mat-sys-surface);
-  color: var(--mat-sys-on-surface);
+  // Darker teal background with custom colors
+  background: linear-gradient(135deg, #062a33 0%, #083847 100%);
+  color: #ffffff;
   font: var(--mat-sys-body-medium);
 
   // Reset the user agent margin.

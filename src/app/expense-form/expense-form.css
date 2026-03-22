@@ -14,8 +14,9 @@
   gap: 1rem;
   padding: 1.75rem;
   border-radius: 24px;
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 30px 70px rgba(15, 23, 42, 0.12);
+  background: rgba(13, 50, 62, 0.7);
+  border: 1px solid rgba(0, 188, 212, 0.2);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(10px);
 }
 
@@ -23,10 +24,14 @@
   text-align: center;
 }
 
+.form-header .flow-title {
+  color: #dbed00;
+}
+
 .flow-subtitle {
   margin: 0.35rem 0 0;
   font-size: 0.88rem;
-  color: #6f7486;
+  color: #b2ebf2;
   line-height: 1.4;
 }
 
@@ -46,14 +51,14 @@
   margin: 0;
   font-size: 0.9rem;
   font-weight: 600;
-  color: #1f2433;
+  color: #ffffff;
   line-height: 1.3;
 }
 
 .section-support {
   margin: 0;
   font-size: 0.8rem;
-  color: #9196ad;
+  color: #80deea;
   line-height: 1.3;
 }
 
@@ -65,6 +70,18 @@
   display: inline-flex;
   gap: 1.5rem;
   padding: 0.35rem 0;
+}
+
+::ng-deep .expense-card .mat-mdc-radio-button {
+  --mdc-radio-selected-icon-color: #dbed00;
+  --mdc-radio-selected-hover-icon-color: #c0d100;
+  --mdc-radio-selected-focus-icon-color: #dbed00;
+  --mdc-radio-selected-pressed-icon-color: #dbed00;
+  --mat-radio-checked-ripple-color: #dbed00;
+}
+
+::ng-deep .expense-card .mat-mdc-radio-button .mdc-label {
+  color: #ffffff;
 }
 
 .expense-amount {
@@ -79,7 +96,7 @@
 
 .expense-amount mat-checkbox {
   margin: 0;
-  color: #3c4053;
+  color: #ffffff;
 }
 
 .category-chips {
@@ -94,9 +111,13 @@
 
 .expense-card mat-form-field,
 .expense-card textarea {
-  --mdc-filled-text-field-container-color: #fff;
-  --mdc-outlined-text-field-container-color: #fff;
-  --mat-form-field-background-color: #fff;
+  --mdc-filled-text-field-container-color: rgba(0, 131, 143, 0.15);
+  --mdc-outlined-text-field-container-color: rgba(0, 131, 143, 0.15);
+  --mat-form-field-background-color: rgba(0, 131, 143, 0.15);
+  --mdc-outlined-text-field-outline-color: rgba(0, 188, 212, 0.4);
+  --mdc-outlined-text-field-focus-outline-color: #00bcd4;
+  --mdc-outlined-text-field-label-text-color: #80deea;
+  --mat-form-field-container-text-color: #ffffff;
 }
 
 .form-actions {
@@ -112,6 +133,16 @@
   font-weight: 600;
   text-transform: none;
   font-size: 0.95rem;
+  background-color: #dbed00 !important;
+  color: #0a3540 !important;
+}
+
+.submit-btn:hover {
+  background-color: #c0d100 !important;
+}
+
+::ng-deep .submit-btn mat-icon {
+  color: #0a3540 !important;
 }
 
 @media (max-width: 960px) {
@@ -142,5 +173,29 @@
 }
 
 #fixed-payment-checkbox {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+::ng-deep .expense-card .mat-mdc-checkbox {
+  --mdc-checkbox-selected-checkmark-color: #0a3540;
+  --mdc-checkbox-selected-icon-color: #dbed00;
+  --mdc-checkbox-selected-hover-icon-color: #c0d100;
+  --mdc-checkbox-selected-focus-icon-color: #dbed00;
+  --mdc-checkbox-selected-pressed-icon-color: #dbed00;
+}
+
+::ng-deep .expense-card .mat-mdc-checkbox .mdc-label {
+  color: #ffffff;
+}
+
+::ng-deep .expense-card mat-chip {
+  --mdc-chip-label-text-color: #ffffff;
+}
+
+::ng-deep .expense-card textarea {
+  color: #ffffff !important;
+}
+
+::ng-deep .expense-card input {
+  color: #ffffff !important;
 }

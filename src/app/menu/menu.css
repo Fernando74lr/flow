@@ -24,31 +24,31 @@ mat-icon {
 }
 
 ::ng-deep .chip-primary {
-  background-color: rgba(66, 165, 245, 0.15) !important;
-  border: 1px solid #1976d2 !important;
-  color: #1565c0 !important;
+  background-color: rgba(219, 237, 0, 0.2) !important;
+  border: 1px solid #dbed00 !important;
+  color: #f4fb8f !important;
 }
 
 ::ng-deep .chip-accent {
-  background-color: rgba(186, 104, 200, 0.15) !important;
-  border: 1px solid #9c27b0 !important;
-  color: #7b1fa2 !important;
+  background-color: rgba(0, 188, 212, 0.2) !important;
+  border: 1px solid #00bcd4 !important;
+  color: #80deea !important;
 }
 
 ::ng-deep .chip-warn {
-  background-color: rgba(239, 83, 80, 0.15) !important;
-  border: 1px solid #d32f2f !important;
-  color: #c62828 !important;
+  background-color: rgba(239, 83, 80, 0.2) !important;
+  border: 1px solid #ef5350 !important;
+  color: #ffcdd2 !important;
 }
 
 ::ng-deep .chip-secondary {
-  background-color: rgba(76, 175, 80, 0.15) !important;
-  border: 1px solid #2e7d32 !important;
-  color: #1b5e20 !important;
+  background-color: rgba(0, 131, 143, 0.25) !important;
+  border: 1px solid #00838f !important;
+  color: #b2ebf2 !important;
 }
 
 ::ng-deep .chip-tertiary {
-  background-color: rgba(3, 169, 244, 0.15) !important;
-  border: 1px solid #0288d1 !important;
-  color: #01579b !important;
+  background-color: rgba(192, 209, 0, 0.2) !important;
+  border: 1px solid #c0d100 !important;
+  color: #e9f54f !important;
 }
