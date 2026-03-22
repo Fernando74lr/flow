@@ -1,0 +1,79 @@
+<div class="expense-form">
+    <form class="expense-card original" [formGroup]="expenseForm">
+        <header class="form-header">
+            <p class="flow-title">Nuevo gasto</p>
+            <p class="flow-subtitle">Registra compras y clasifícalas en segundos.</p>
+        </header>
+
+        <section class="form-section">
+            <div class="section-header">
+                <p class="section-title">Compra</p>
+                <p class="section-support">Añade un nombre fácil de identificar.</p>
+            </div>
+            <mat-form-field appearance="outline">
+                <mat-label>Producto o servicio</mat-label>
+                <input matInput formControlName="title" />
+            </mat-form-field>
+        </section>
+
+        <section class="form-section">
+            <div class="section-header">
+                <p class="section-title">Tarjeta</p>
+                <p class="section-support">Selecciona el plástico que se cargará.</p>
+            </div>
+            <mat-radio-group class="radio-layout" [formControl]="cardLabelControl">
+                <mat-radio-button value="TDD">TDD</mat-radio-button>
+                <mat-radio-button value="TDC">TDC</mat-radio-button>
+            </mat-radio-group>
+        </section>
+
+        <section class="form-section">
+            <div class="section-header">
+                <p class="section-title">Monto</p>
+                <p class="section-support">Define el monto y si será un pago fijo.</p>
+            </div>
+            <div class="expense-amount">
+                <mat-form-field appearance="outline">
+                    <mat-label>Monto</mat-label>
+                    <input matInput type="number" class="amount" formControlName="amount" />
+                </mat-form-field>
+                <mat-checkbox [formControl]="isFixedPayment" id="fixed-payment-checkbox">
+                    Pago fijo
+                </mat-checkbox>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <div class="section-header">
+                <p class="section-title">Categoría</p>
+                <p class="section-support">Agrupa el gasto para tus reportes.</p>
+            </div>
+            <mat-chip-set aria-label="Categoría" class="category-chips">
+                <mat-chip>Ocio</mat-chip>
+                <mat-chip>Trabajo</mat-chip>
+                <mat-chip>Transporte</mat-chip>
+                <mat-chip disabled>Otros</mat-chip>
+            </mat-chip-set>
+        </section>
+
+        <section class="form-section">
+            <div class="section-header">
+                <p class="section-title">Notas</p>
+                <p class="section-support">Agrega recordatorios o adjunta recibos.</p>
+            </div>
+            <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Notas</mat-label>
+                <textarea matInput placeholder="Escribe detalles extras" formControlName="notes"></textarea>
+            </mat-form-field>
+        </section>
+
+        <input hidden type="file" #fileInput>
+
+        <div class="form-actions">
+            <button mat-raised-button color="primary" class="submit-btn" type="submit" (click)="createExpense()">
+                <mat-icon>receipt</mat-icon>
+                Registrar
+            </button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,28 @@
+:root {
+  --form-surface-color: #fff;
+  --form-border-color: #cdd5df;
+}
+
+/* Apply white surface to every Material text field variant */
+.mat-mdc-form-field,
+.mdc-text-field,
+.mdc-text-field--filled,
+.mdc-text-field--outlined {
+  --mdc-filled-text-field-container-color: var(--form-surface-color);
+  --mdc-outlined-text-field-container-shape: 12px;
+  background-color: var(--form-surface-color);
+}
+
+.mat-mdc-form-field .mdc-line-ripple::before,
+.mat-mdc-form-field .mdc-line-ripple::after {
+  border-bottom-color: var(--form-border-color);
+}
+
+textarea.mat-mdc-input-element,
+input.mat-mdc-input-element {
+  background-color: transparent;
+}
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: transparent !important;
+}

@@ -25,7 +25,9 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/material-theme.scss",
+              "src/styles.css",
+              "src/global-overrides.css"
             ]
           },
           "configurations": {
