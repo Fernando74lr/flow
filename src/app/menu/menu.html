@@ -1,0 +1,10 @@
+<div class="menu">
+    <mat-chip-grid #chipGrid aria-label="Menu options" class="options">
+        @for (option of menuOptions; track option.name) {
+        <mat-chip-row class="option {{option.colorClass}}">
+            <mat-icon aria-hidden="true" fontIcon="{{option.icon}}" />
+            <span>{{option.name}}</span>
+        </mat-chip-row>
+        }
+    </mat-chip-grid>
+</div>

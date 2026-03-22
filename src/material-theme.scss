@@ -17,6 +17,12 @@ html {
       density: 0,
     )
   );
+
+  @include mat.chips-overrides(
+    (
+      container-shape-radius: 20px,
+    )
+  );
 }
 
 body {
