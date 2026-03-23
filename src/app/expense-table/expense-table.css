@@ -1,5 +1,20 @@
-
 .expense-table th,
 .expense-table td {
   text-align: center;
+}
+
+/* Dark theme styles for table (default) */
+.expense-table {
+  --mat-table-background-color: rgba(18, 18, 18, 0.5);
+  --mat-table-row-item-outline-color: rgba(76, 175, 80, 0.2);
+}
+
+.mat-mdc-table {
+  background: transparent;
+}
+
+/* Light theme table overrides */
+body.light-theme .expense-table {
+  --mat-table-background-color: rgba(13, 50, 62, 0.5);
+  --mat-table-row-item-outline-color: rgba(0, 188, 212, 0.2);
 }

@@ -2,3 +2,21 @@
   display: flex;
   justify-content: space-between;
 }
+
+.navbar-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+#navbar button {
+  transition: all 0.2s ease;
+}
+
+#navbar button:hover {
+  transform: scale(1.1);
+}
+
+#navbar mat-icon {
+  transition: color 0.2s ease;
+}

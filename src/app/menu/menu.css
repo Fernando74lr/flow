@@ -24,15 +24,15 @@ mat-icon {
 }
 
 ::ng-deep .chip-primary {
-  background-color: rgba(219, 237, 0, 0.2) !important;
-  border: 1px solid #dbed00 !important;
-  color: #f4fb8f !important;
+  background-color: rgba(76, 175, 80, 0.2) !important;
+  border: 1px solid #4caf50 !important;
+  color: #a5d6a7 !important;
 }
 
 ::ng-deep .chip-accent {
-  background-color: rgba(0, 188, 212, 0.2) !important;
-  border: 1px solid #00bcd4 !important;
-  color: #80deea !important;
+  background-color: rgba(102, 187, 106, 0.2) !important;
+  border: 1px solid #66bb6a !important;
+  color: #c5e1a5 !important;
 }
 
 ::ng-deep .chip-warn {
@@ -42,12 +42,43 @@ mat-icon {
 }
 
 ::ng-deep .chip-secondary {
+  background-color: rgba(129, 199, 132, 0.2) !important;
+  border: 1px solid #81c784 !important;
+  color: #dcedc8 !important;
+}
+
+::ng-deep .chip-tertiary {
+  background-color: rgba(76, 175, 80, 0.2) !important;
+  border: 1px solid #4caf50 !important;
+  color: #a5d6a7 !important;
+}
+
+/* Light Theme Chip Colors */
+body.light-theme ::ng-deep .chip-primary {
+  background-color: rgba(219, 237, 0, 0.2) !important;
+  border: 1px solid #dbed00 !important;
+  color: #f4fb8f !important;
+}
+
+body.light-theme ::ng-deep .chip-accent {
+  background-color: rgba(0, 188, 212, 0.2) !important;
+  border: 1px solid #00bcd4 !important;
+  color: #80deea !important;
+}
+
+body.light-theme ::ng-deep .chip-warn {
+  background-color: rgba(239, 83, 80, 0.2) !important;
+  border: 1px solid #ef5350 !important;
+  color: #ffcdd2 !important;
+}
+
+body.light-theme ::ng-deep .chip-secondary {
   background-color: rgba(0, 131, 143, 0.25) !important;
   border: 1px solid #00838f !important;
   color: #b2ebf2 !important;
 }
 
-::ng-deep .chip-tertiary {
+body.light-theme ::ng-deep .chip-tertiary {
   background-color: rgba(192, 209, 0, 0.2) !important;
   border: 1px solid #c0d100 !important;
   color: #e9f54f !important;

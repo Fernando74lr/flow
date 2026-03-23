@@ -6,6 +6,25 @@
 @use '@angular/material' as mat;
 
 // Define custom color palettes matching the design
+$green-palette: (
+  0: #000000,
+  10: #003300,
+  20: #005005,
+  25: #00600a,
+  30: #00700e,
+  35: #008012,
+  40: #009016,
+  50: #2e7d32,
+  60: #4caf50,
+  70: #66bb6a,
+  80: #81c784,
+  90: #a5d6a7,
+  95: #c5e1a5,
+  98: #dcedc8,
+  99: #e8f5e9,
+  100: #ffffff,
+);
+
 $dark-teal-palette: (
   0: #000000,
   10: #001f24,
@@ -49,9 +68,9 @@ html {
   @include mat.theme(
     (
       color: (
-        primary: $lime-palette,
+        primary: $green-palette,
         secondary: $dark-teal-palette,
-        tertiary: mat.$cyan-palette,
+        tertiary: $lime-palette,
         theme-type: dark,
       ),
       typography: Roboto,
@@ -68,19 +87,24 @@ html {
   // Ensure buttons have proper text colors
   --mat-text-button-label-text-color: #ffffff;
   --mat-outlined-button-label-text-color: #ffffff;
-  --mat-protected-button-label-text-color: #0a3540;
+  --mat-protected-button-label-text-color: #000000;
 }
 
 body {
   // Enable dark color theme
   color-scheme: dark;
 
-  // Darker teal background with custom colors
-  background: linear-gradient(135deg, #062a33 0%, #083847 100%);
+  // Pure dark background
+  background: linear-gradient(135deg, #0a0a0a 0%, #121212 100%);
   color: #ffffff;
   font: var(--mat-sys-body-medium);
 
   // Reset the user agent margin.
   margin: 0;
   height: 100%;
+}
+
+// Light theme overrides
+body.light-theme {
+  background: linear-gradient(135deg, #062a33 0%, #083847 100%);
 }

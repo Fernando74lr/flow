@@ -1,16 +1,36 @@
 :root {
-  --form-surface-color: #fff;
-  --form-border-color: #cdd5df;
+  --form-surface-color: rgba(40, 40, 40, 0.8);
+  --form-border-color: rgba(76, 175, 80, 0.4);
+  --form-text-color: #ffffff;
 }
 
-/* Apply white surface to every Material text field variant */
+body.light-theme {
+  --form-surface-color: rgba(0, 131, 143, 0.15);
+  --form-border-color: rgba(0, 188, 212, 0.4);
+}
+
+/* Apply dark surface to every Material text field variant */
 .mat-mdc-form-field,
 .mdc-text-field,
 .mdc-text-field--filled,
 .mdc-text-field--outlined {
   --mdc-filled-text-field-container-color: var(--form-surface-color);
+  --mdc-outlined-text-field-container-color: var(--form-surface-color);
   --mdc-outlined-text-field-container-shape: 12px;
+  --mdc-outlined-text-field-outline-color: var(--form-border-color);
+  --mdc-outlined-text-field-focus-outline-color: #4caf50;
+  --mdc-outlined-text-field-input-text-color: var(--form-text-color);
+  --mdc-outlined-text-field-label-text-color: #9e9e9e;
+  --mat-form-field-container-text-color: var(--form-text-color);
   background-color: var(--form-surface-color);
+}
+
+body.light-theme .mat-mdc-form-field,
+body.light-theme .mdc-text-field,
+body.light-theme .mdc-text-field--filled,
+body.light-theme .mdc-text-field--outlined {
+  --mdc-outlined-text-field-focus-outline-color: #00bcd4;
+  --mdc-outlined-text-field-label-text-color: #80deea;
 }
 
 .mat-mdc-form-field .mdc-line-ripple::before,
@@ -20,9 +40,20 @@
 
 textarea.mat-mdc-input-element,
 input.mat-mdc-input-element {
-  background-color: transparent;
+  background-color: transparent !important;
+  color: var(--form-text-color) !important;
+  caret-color: #4caf50 !important;
+}
+
+body.light-theme textarea.mat-mdc-input-element,
+body.light-theme input.mat-mdc-input-element {
+  caret-color: #00bcd4 !important;
 }
 
 .mdc-text-field--filled:not(.mdc-text-field--disabled) {
   background-color: transparent !important;
+}
+
+.mat-mdc-form-field-subscript-wrapper {
+  display: none;
 }
