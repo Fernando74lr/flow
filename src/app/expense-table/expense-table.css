@@ -15,6 +15,11 @@
 
 /* Light theme table overrides */
 body.light-theme .expense-table {
-  --mat-table-background-color: rgba(13, 50, 62, 0.5);
-  --mat-table-row-item-outline-color: rgba(0, 188, 212, 0.2);
+  --mat-table-background-color: rgba(255, 255, 255, 0.8);
+  --mat-table-row-item-outline-color: rgba(0, 0, 0, 0.3) !important;
+  --mat-table-row-item-label-text-color: #212121 !important;
+}
+
+body.light-theme .mat-mdc-table {
+  color: #212121;
 }

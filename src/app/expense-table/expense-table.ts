@@ -8,12 +8,6 @@ const ELEMENT_DATA: Expense[] = [
   { title: 'Helium', date: '2024-01-02', amount: 200, payment_type: 'Debit' },
   { title: 'Lithium', date: '2024-01-03', amount: 300, payment_type: 'Credit' },
   { title: 'Beryllium', date: '2024-01-04', amount: 400, payment_type: 'Debit' },
-  { title: 'Boron', date: '2024-01-05', amount: 500, payment_type: 'Credit' },
-  { title: 'Carbon', date: '2024-01-06', amount: 600, payment_type: 'Debit' },
-  { title: 'Nitrogen', date: '2024-01-07', amount: 700, payment_type: 'Credit' },
-  { title: 'Oxygen', date: '2024-01-08', amount: 800, payment_type: 'Debit' },
-  { title: 'Fluorine', date: '2024-01-09', amount: 900, payment_type: 'Credit' },
-  { title: 'Neon', date: '2024-01-10', amount: 1000, payment_type: 'Debit' },
 ];
 
 @Component({

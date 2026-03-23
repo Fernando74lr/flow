@@ -5,8 +5,9 @@
 }
 
 body.light-theme {
-  --form-surface-color: rgba(0, 131, 143, 0.15);
-  --form-border-color: rgba(0, 188, 212, 0.4);
+  --form-surface-color: rgba(245, 245, 245, 0.6);
+  --form-border-color: rgba(76, 175, 80, 0.3);
+  --form-text-color: #212121;
 }
 
 /* Apply dark surface to every Material text field variant */
@@ -29,8 +30,10 @@ body.light-theme .mat-mdc-form-field,
 body.light-theme .mdc-text-field,
 body.light-theme .mdc-text-field--filled,
 body.light-theme .mdc-text-field--outlined {
-  --mdc-outlined-text-field-focus-outline-color: #00bcd4;
-  --mdc-outlined-text-field-label-text-color: #80deea;
+  --mdc-outlined-text-field-focus-outline-color: #4caf50;
+  --mdc-outlined-text-field-label-text-color: #757575;
+  --mdc-outlined-text-field-input-text-color: #212121;
+  --mat-form-field-container-text-color: #212121;
 }
 
 .mat-mdc-form-field .mdc-line-ripple::before,
@@ -47,7 +50,8 @@ input.mat-mdc-input-element {
 
 body.light-theme textarea.mat-mdc-input-element,
 body.light-theme input.mat-mdc-input-element {
-  caret-color: #00bcd4 !important;
+  caret-color: #4caf50 !important;
+  color: #212121 !important;
 }
 
 .mdc-text-field--filled:not(.mdc-text-field--disabled) {

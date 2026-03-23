@@ -14,10 +14,9 @@
   gap: 1rem;
   padding: 1.75rem;
   border-radius: 24px;
-  background: rgba(18, 18, 18, 0.9);
+  background: transparent;
   border: 1px solid rgba(76, 175, 80, 0.2);
-  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
 }
 
 .form-header {
@@ -148,49 +147,90 @@
 
 /* Light Theme overrides for expense form */
 body.light-theme .expense-card {
-  background: rgba(13, 50, 62, 0.7) !important;
-  border: 1px solid rgba(0, 188, 212, 0.2) !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 1px solid rgba(76, 175, 80, 0.2) !important;
 }
 
-body.light-theme .form-header .flow-title {
-  color: #dbed00;
+:host-context(body.light-theme) .submit-btn,
+:host-context(body.light-theme) ::ng-deep .submit-btn mat-icon {
+  color: #ffffff !important;
 }
 
-body.light-theme .flow-subtitle {
-  color: #b2ebf2;
+:host-context(body.light-theme) .form-header .flow-title {
+  color: #4caf50 !important;
 }
 
-body.light-theme .section-support {
-  color: #80deea;
+:host-context(body.light-theme) .flow-subtitle {
+  color: #757575 !important;
 }
 
-body.light-theme ::ng-deep .expense-card .mat-mdc-radio-button {
-  --mdc-radio-selected-icon-color: #dbed00;
-  --mdc-radio-selected-hover-icon-color: #c0d100;
-  --mdc-radio-selected-focus-icon-color: #dbed00;
-  --mdc-radio-selected-pressed-icon-color: #dbed00;
-  --mat-radio-checked-ripple-color: #dbed00;
+:host-context(body.light-theme) .section-support {
+  color: #757575 !important;
 }
 
-body.light-theme .submit-btn {
-  background-color: #dbed00 !important;
-  color: #0a3540 !important;
+:host-context(body.light-theme) .section-title {
+  color: #212121 !important;
 }
 
-body.light-theme .submit-btn:hover {
-  background-color: #c0d100 !important;
+:host-context(body.light-theme) ::ng-deep .expense-card .mat-mdc-radio-button {
+  --mdc-radio-selected-icon-color: #4caf50;
+  --mdc-radio-selected-hover-icon-color: #66bb6a;
+  --mdc-radio-selected-focus-icon-color: #4caf50;
+  --mdc-radio-selected-pressed-icon-color: #4caf50;
+  --mat-radio-checked-ripple-color: #4caf50;
+  --mdc-radio-unselected-icon-color: #616161;
+  --mdc-radio-unselected-hover-icon-color: #757575;
 }
 
-body.light-theme ::ng-deep .submit-btn mat-icon {
-  color: #0a3540 !important;
+:host-context(body.light-theme) ::ng-deep .expense-card .mat-mdc-radio-button .mdc-label {
+  color: #212121 !important;
+}
+
+:host-context(body.light-theme) .expense-amount mat-checkbox {
+  color: #212121 !important;
+}
+
+:host-context(body.light-theme) .submit-btn {
+  background-color: #4caf50 !important;
+  color: #ffffff !important;
+}
+
+:host-context(body.light-theme) .submit-btn:hover {
+  background-color: #66bb6a !important;
+}
+
+:host-context(body.light-theme) ::ng-deep .submit-btn mat-icon {
+  color: #ffffff !important;
 }
 
 body.light-theme ::ng-deep .expense-card .mat-mdc-checkbox {
-  --mdc-checkbox-selected-checkmark-color: #0a3540;
-  --mdc-checkbox-selected-icon-color: #dbed00;
-  --mdc-checkbox-selected-hover-icon-color: #c0d100;
-  --mdc-checkbox-selected-focus-icon-color: #dbed00;
-  --mdc-checkbox-selected-pressed-icon-color: #dbed00;
+  --mdc-checkbox-selected-checkmark-color: #ffffff;
+  --mdc-checkbox-selected-icon-color: #4caf50;
+  --mdc-checkbox-selected-hover-icon-color: #66bb6a;
+  --mdc-checkbox-selected-focus-icon-color: #4caf50;
+  --mdc-checkbox-selected-pressed-icon-color: #4caf50;
+}
+
+body.light-theme ::ng-deep .expense-card .mat-mdc-checkbox .mdc-label {
+  color: #212121;
+}
+
+body.light-theme ::ng-deep .expense-card mat-chip {
+  --mdc-chip-label-text-color: #212121;
+}
+
+body.light-theme ::ng-deep .expense-card .category-chips mat-chip {
+  background-color: rgba(76, 175, 80, 0.1) !important;
+  border: 1px solid rgba(76, 175, 80, 0.3);
+  color: #2e7d32;
+}
+
+body.light-theme ::ng-deep .expense-card textarea {
+  color: #212121 !important;
+}
+
+body.light-theme ::ng-deep .expense-card input {
+  color: #212121 !important;
 }
 
 @media (max-width: 960px) {

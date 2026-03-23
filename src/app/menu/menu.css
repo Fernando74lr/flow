@@ -3,7 +3,8 @@
   width: 100%;
   justify-content: space-evenly;
   align-items: center;
-  margin-bottom: 20px;
+  padding: 0.75rem 0;
+  margin-bottom: 1.5rem;
 }
 
 mat-icon {
@@ -21,6 +22,12 @@ mat-icon {
   box-shadow:
     0 4px 8px rgba(0, 0, 0, 0.15),
     0 2px 4px rgba(0, 0, 0, 0.12);
+}
+
+:host-context(body.light-theme) ::ng-deep mat-chip-row:hover {
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.12),
+    0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 ::ng-deep .chip-primary {
@@ -53,33 +60,43 @@ mat-icon {
   color: #a5d6a7 !important;
 }
 
-/* Light Theme Chip Colors */
-body.light-theme ::ng-deep .chip-primary {
-  background-color: rgba(219, 237, 0, 0.2) !important;
-  border: 1px solid #dbed00 !important;
-  color: #f4fb8f !important;
+/* Light Theme Chip Colors - Green accents on white */
+:host-context(body.light-theme) ::ng-deep .chip-primary {
+  background-color: rgba(76, 175, 80, 0.15) !important;
+  border: 1px solid #4caf50 !important;
+  color: #212121 !important;
 }
 
-body.light-theme ::ng-deep .chip-accent {
-  background-color: rgba(0, 188, 212, 0.2) !important;
-  border: 1px solid #00bcd4 !important;
-  color: #80deea !important;
+:host-context(body.light-theme) ::ng-deep .chip-accent {
+  background-color: rgba(102, 187, 106, 0.15) !important;
+  border: 1px solid #66bb6a !important;
+  color: #212121 !important;
 }
 
-body.light-theme ::ng-deep .chip-warn {
-  background-color: rgba(239, 83, 80, 0.2) !important;
+:host-context(body.light-theme) ::ng-deep .chip-warn {
+  background-color: rgba(239, 83, 80, 0.15) !important;
   border: 1px solid #ef5350 !important;
-  color: #ffcdd2 !important;
+  color: #212121 !important;
 }
 
-body.light-theme ::ng-deep .chip-secondary {
-  background-color: rgba(0, 131, 143, 0.25) !important;
-  border: 1px solid #00838f !important;
-  color: #b2ebf2 !important;
+:host-context(body.light-theme) ::ng-deep .chip-secondary {
+  background-color: rgba(129, 199, 132, 0.15) !important;
+  border: 1px solid #81c784 !important;
+  color: #212121 !important;
 }
 
-body.light-theme ::ng-deep .chip-tertiary {
-  background-color: rgba(192, 209, 0, 0.2) !important;
-  border: 1px solid #c0d100 !important;
-  color: #e9f54f !important;
+:host-context(body.light-theme) ::ng-deep .chip-tertiary {
+  background-color: rgba(76, 175, 80, 0.15) !important;
+  border: 1px solid #4caf50 !important;
+  color: #212121 !important;
+}
+
+/* Light theme chip icons */
+:host-context(body.light-theme) ::ng-deep mat-chip-row mat-icon {
+  color: #212121 !important;
+}
+
+/* Light theme chip labels */
+:host-context(body.light-theme) ::ng-deep mat-chip-row .mdc-evolution-chip__text-label {
+  color: #212121 !important;
 }

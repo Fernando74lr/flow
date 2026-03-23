@@ -1,0 +1,155 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.balance-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.balance-card {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem 2.5rem;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  width: 100%;
+  max-width: 900px;
+}
+
+.cycle-info {
+  text-align: left;
+  padding-right: 2rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cycle-label {
+  margin: 0 0 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #9e9e9e;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cycle-dates {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.remaining-budget {
+  text-align: center;
+}
+
+.budget-label {
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #9e9e9e;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.budget-amount {
+  margin: 0;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #4caf50;
+  line-height: 1.2;
+  text-shadow: 0 2px 10px rgba(76, 175, 80, 0.3);
+}
+
+.budget-limit {
+  text-align: right;
+  padding-left: 2rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.limit-label {
+  margin: 0 0 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #9e9e9e;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.limit-amount {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .balance-card {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .cycle-info,
+  .budget-limit {
+    text-align: center;
+    padding: 0;
+    border: none;
+  }
+
+  .cycle-info {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .budget-limit {
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Light theme overrides */
+:host-context(body.light-theme) .balance-card {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+:host-context(body.light-theme) .cycle-info,
+:host-context(body.light-theme) .budget-limit {
+  border-color: rgba(0, 0, 0, 0.3) !important;
+}
+
+:host-context(body.light-theme) .cycle-dates,
+:host-context(body.light-theme) .limit-amount {
+  color: #212121 !important;
+}
+
+:host-context(body.light-theme) .budget-amount {
+  color: #2e7d32 !important;
+  text-shadow: 0 2px 10px rgba(46, 125, 50, 0.2);
+}
+
+:host-context(body.light-theme) .cycle-label,
+:host-context(body.light-theme) .budget-label,
+:host-context(body.light-theme) .limit-label {
+  color: #212121 !important;
+  font-weight: 600 !important;
+}
+
+/* Light theme responsive overrides */
+@media (max-width: 768px) {
+  :host-context(body.light-theme) .cycle-info {
+    border-bottom-color: rgba(0, 0, 0, 0.3) !important;
+  }
+
+  :host-context(body.light-theme) .budget-limit {
+    border-top-color: rgba(0, 0, 0, 0.3) !important;
+  }
+}
